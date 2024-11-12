@@ -1,0 +1,48 @@
+<body>
+    <div class="filter-container">
+        <div class="node-select-container">
+            <label for="nodeSearch">Search:</label>
+            <div style="position: relative;">
+                <input type="text" id="nodeSearch" placeholder="Type a node..." oninput="searchNodes()" />
+                <span id="clearSearch" class="clear-button" style="display: none;" onclick="clearSearch()">x</span>
+            </div>
+            <div id="suggestions" class="suggestion-list"></div>
+        </div>
+
+        <div class="category-filter">
+            <label for="categoryFilter">Category:</label>
+            <div style="position: relative;"></div>
+                <select id="categoryFilter">
+                    <option value="">All</option>
+                    <option value="internal">Internal</option>
+                    <option value="external">External</option>
+            </div>
+            </select>
+        </div>
+
+        <div class="filter-wrapper">
+            <label for="dependenciesFilter">Dependencies >= <span class="bold-number" id="dependencyValue">0</span></label>
+            <div class="slider-labels">
+                <span>0</span>
+                <input type="range" id="dependenciesFilter" min="0" max="{max_dependencies}" step="1" value="0" />
+                <span id="max-dependency-value">{max_dependencies}</span>
+            </div>
+        </div>
+
+        <div class="filter-wrapper">
+            <label for="dependentsFilter">Dependents >= <span class="bold-number" id="dependentsValue">0</span></label>
+            <div class="slider-labels">
+                <span>0</span>
+                <input type="range" id="dependentsFilter" min="0" max="{max_dependents}" step="1" value="0" />
+                <span id="max-dependents-value">{max_dependents}</span>
+            </div>
+        </div>
+
+        <div class="reset-button-container">
+            <button id="resetFiltersButton">Reset</button>
+        </div>
+    </div>
+
+    <div id="mynetwork"></div>
+
+    <script src="{functions_path}"></script>

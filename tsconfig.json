@@ -1,0 +1,15 @@
+{
+    "compilerOptions": {
+      "outDir": "./out",            // Output compiled JS files here
+      "module": "commonjs",         // Use commonjs for Node.js compatibility
+      "target": "ES6",              // Set target to ES6 (for modern JavaScript features)
+      "sourceMap": true             // Generate source maps for debugging
+    },
+    "include": [
+      "src/**/*.ts"                 // Include all .ts files in the src folder
+    ],
+    "exclude": [
+      "node_modules"                // Exclude node_modules from compilation
+    ]
+  }
+  

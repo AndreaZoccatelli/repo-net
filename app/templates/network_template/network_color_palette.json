@@ -1,0 +1,12 @@
+{
+    "internal": {
+        "primary": "#64FFDA",
+        "border": "#1E6B5E",
+        "highlight": "#9EFFEB"
+    },
+    "external": {
+        "primary": "#F6009B",
+        "border": "#8B0058",
+        "highlight": "#FF66C4"
+    }
+}

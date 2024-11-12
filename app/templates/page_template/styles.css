@@ -1,0 +1,211 @@
+:root {
+    --primary-bg-color: #0A192F;
+    --secondary-bg-color: #64FFDA;
+    --text-color: #E6F1FF;
+}
+
+body {
+    font-family: 'Monaco', 'Consolas', monospace;
+    margin: 0;
+    background-color: var(--primary-bg-color);
+}
+#mynetwork {
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+.label-title {
+    font-family: Monaco, Consolas, monospace;
+    color: var(--text-color);
+    font-size: 14px;
+    font-weight: bold;
+    white-space: nowrap;  /* Prevents line wrapping */
+    margin-right: 10px;   /* Adds spacing between label and input */
+}
+.vis-network:focus {
+    outline: none;
+}
+.vis-tooltip {
+    position: absolute;
+    padding: 10px;
+    background-color: rgba(10, 25, 47, 0.95);
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 5px;
+    color: white;
+    font-family: Monaco, Consolas, monospace;
+    font-size: 14px;
+    pointer-events: none;
+    z-index: 1000;
+    white-space: pre-wrap;
+}
+.filter-container {
+    padding: 10px;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: Monaco, Consolas, monospace;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.filter-wrapper {
+    font-family: Monaco, Consolas, monospace;
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
+    width: 250px;
+}
+
+.filter-wrapper .slider-labels {
+    display: flex;
+    align-items: center;
+    color: var(--text-color);
+    width: 100%;
+}
+
+.filter-wrapper input[type="range"] {
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    font-family: Monaco, Consolas, monospace;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    padding: 0;  /* Removes extra padding */
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+    height: 5px;  /* Ensures slider height is consistent */
+}
+
+.filter-wrapper input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 14px;
+    width: 14px;
+    background-color: var(--secondary-bg-color);
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    top: -4.5px;  /* Centers thumb vertically within slider */
+}
+
+.filter-wrapper input[type="range"]::-webkit-slider-runnable-track {
+    height: 5px;
+    background: var(--primary-bg-color);
+    border-radius: 5px;
+}
+
+
+.filter-container input[type="range"] {
+    width: 100%;
+    margin-left: 10px; 
+    margin-right: 10px; 
+}
+
+.bold-number {
+    font-weight: bold;
+}
+.filter-container > .filter-wrapper {
+    margin-right: 20px;
+}
+.node-select-container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 0;
+    position: relative;
+    width: 250px;
+}
+
+
+/* Additional styling to make 'Category' and 'Minimum Dependencies' more uniform */
+
+
+.filter-wrapper input[type="range"] {
+    height: 14px; /* Adjust the height for consistency */
+}
+
+/* Make sure the slider thumb and track styling is also consistent */
+
+.node-select-container input, .category-filter select, .filter-wrapper input {
+    width: 100%;
+    background-color: var(--primary-bg-color);
+    color: var(--text-color);
+    border: 1px solid var(--secondary-bg-color);
+    font-family: Monaco, Consolas, monospace;
+    padding: 10px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    outline: none;
+    border-radius: 5px;
+}
+.suggestion-list {
+    position: absolute;
+    top: 80px;  
+    left: 0;
+    width: 100%;  
+    max-width: 100%; 
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--secondary-bg-color);
+    border-radius: 5px;
+    max-height: 200px;
+    overflow-y: auto;
+    display: none;
+    z-index: 10;
+}
+.suggestion-list div {
+    padding: 10px;
+    color: var(--text-color);
+    cursor: pointer;
+    word-wrap: break-word; 
+}
+.suggestion-list div:hover {
+    background-color: #1c64d4;
+}
+.clear-button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 30px;
+    color: var(--secondary-bg-color);
+    cursor: pointer;
+    user-select: none;
+}
+.category-filter select {
+    appearance: none;
+}
+
+/* Style for the reset button container to align with the rest */
+.reset-button-container {
+    display: flex;
+    justify-content: center;  /* Centers the button within the container */
+    align-items: center;      /* Vertically aligns the button */
+    margin-top: 20px;         /* Adds spacing above the button */
+}
+
+/* Apply consistent style to the button */
+#resetFiltersButton {
+    font-family: Monaco, Consolas, monospace;
+    font-size: 14px;          /* Ensures the font size is consistent */
+    font-weight: bold;        /* Makes the text bold */
+    color: var(--text-color);           /* Text color to match the rest */
+    background-color: var(--primary-bg-color); /* Background color to match other elements */
+    border: 1px solid var(--secondary-bg-color); /* Border color to match */
+    border-radius: 5px;       /* Rounded corners for consistency */
+    padding: 10px 20px;       /* Adjust padding for better button sizing */
+    cursor: pointer;         /* Indicates clickable */
+    transition: background-color 0.3s, border 0.3s; /* Smooth hover effect */
+}
+
+/* Hover effect to indicate interactivity */
+#resetFiltersButton:hover {
+    background-color: var(--secondary-bg-color); /* Lighter background color when hovered */
+    border-color: var(--primary-bg-color);     /* Darker border color on hover */
+    color: var(--primary-bg-color); 
+}
+
+/* Active state for when the button is clicked */
+#resetFiltersButton:active {
+    background-color: var(--primary-bg-color); /* Keep the original background when pressed */
+    border-color: var(--secondary-bg-color);     /* Change border color on press */
+}
+

@@ -1,0 +1,59 @@
+{
+    "nodes": {
+        "shape": "dot",
+        "shadow": {
+            "enabled": true,
+            "color": "rgba(0,0,0,0.5)",
+            "size": 10,
+            "x": 5,
+            "y": 5
+        },
+        "font": {
+            "color": "#E6F1FF",
+            "face": "Monaco, Consolas, monospace",
+            "size": 18,
+            "strokeWidth": 2,
+            "strokeColor": "#0A192F"
+        }
+    },
+    "edges": {
+        "color": {
+            "color": "#64FFDA",
+            "highlight": "#F6009B",
+            "hover": "#F6009B",
+            "opacity": 0.8
+        },
+        "width": 1.5,
+        "smooth": {
+            "type": "continuous",
+            "roundness": 0.5
+        },
+        "hoverWidth": 2,
+        "selectionWidth": 2,
+        "arrows": {
+            "to": {
+                "enabled": true,
+                "scaleFactor": 0.5,
+                "type": "arrow"
+            }
+        }
+    },
+    "physics": {
+        "barnesHut": {
+            "gravitationalConstant": -100000,
+            "centralGravity": 0.3,
+            "springLength": 100,
+            "springConstant": 0.04,
+            "damping": 0.09
+        }
+    },
+    "interaction": {
+        "hover": true,
+        "tooltipDelay": 200,
+        "zoomView": true,
+        "dragView": true
+    },
+    "layout":{
+        "improvedLayout":false
+    }
+}
